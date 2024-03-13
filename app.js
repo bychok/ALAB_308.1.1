@@ -75,9 +75,9 @@ const isAllUnder26 = n1 <= 25 && n2 <= 25 && n3 <= 25 && n4 <= 25;
 // Then, when combining the checks, you no longer need to use the ! operator with this variable
 const isValid = isSum50 && isTwoOdd && isAllUnder26 && isUnique;
 
-console.log(isValid);
+console.log("Are all the conditions valid?", isValid);
 
-// -------------------- [ Math Problems ] --------------------
+// -------------------- [ Practical Math ] --------------------
 
 /*
 You are planning a cross-country road trip!
@@ -98,4 +98,49 @@ Compare the results when traveling at an average of 55, 60, and 75 miles per hou
 Which makes the most sense for the trip?
 */
 
-// -------------------- [ Math Problems ] --------------------
+// Constants
+const distance = 1500; // Total distance in miles
+const fuelCostPerGallon = 3; // Cost of fuel per gallon in dollars
+const budget = 175; // Fuel budget in dollars
+
+// Speeds and their respective fuel efficiencies
+const speed1 = 55,
+  efficiency1 = 30;
+const speed2 = 60,
+  efficiency2 = 28;
+const speed3 = 75,
+  efficiency3 = 23;
+
+// Calculations for each speed
+const gallonsNeeded1 = distance / efficiency1;
+const totalCost1 = gallonsNeeded1 * fuelCostPerGallon;
+const timeTaken1 = distance / speed1;
+
+const gallonsNeeded2 = distance / efficiency2;
+const totalCost2 = gallonsNeeded2 * fuelCostPerGallon;
+const timeTaken2 = distance / speed2;
+
+const gallonsNeeded3 = distance / efficiency3;
+const totalCost3 = gallonsNeeded3 * fuelCostPerGallon;
+const timeTaken3 = distance / speed3;
+
+// Displaying the results
+console.log(`Traveling at ${speed1} mph:`);
+console.log(`  Gallons of fuel needed: ${gallonsNeeded1}`);
+console.log(`  Total fuel cost: $${totalCost1}`);
+console.log(`  Time taken (hours): ${timeTaken1}`);
+console.log(`  Within budget: ${budget >= totalCost1 ? "Yes" : "No"}`);
+
+console.log(`\nTraveling at ${speed2} mph:`);
+console.log(`  Gallons of fuel needed: ${gallonsNeeded2}`);
+console.log(`  Total fuel cost: $${totalCost2}`);
+console.log(`  Time taken (hours): ${timeTaken2}`);
+console.log(`  Within budget: ${budget >= totalCost2 ? "Yes" : "No"}`);
+
+console.log(`\nTraveling at ${speed3} mph:`);
+console.log(`  Gallons of fuel needed: ${gallonsNeeded3}`);
+console.log(`  Total fuel cost: $${totalCost3}`);
+console.log(`  Time taken (hours): ${timeTaken3}`);
+console.log(`  Within budget: ${budget >= totalCost3 ? "Yes" : "No"}`);
+
+// -------------------- [ Future Exploration ] --------------------
